@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>L.A Ardoise – Tableaux pour écrire et afficher</title>
+<meta name="description" content="L.A Ardoise : alphabets, tableaux de géométrie, menus du jour et tableaux sur chevalet, faits à la main à Douala. Commande par WhatsApp, livraison au Cameroun.">
+<meta name="theme-color" content="#f2c21b">
+<meta property="og:type" content="website"><meta property="og:locale" content="fr_FR"><meta property="og:site_name" content="L.A Ardoise">
+<meta property="og:title" content="L.A Ardoise – Tableaux pour écrire et afficher">
+<meta property="og:description" content="Alphabets, géométrie, menus du jour et tableaux sur chevalet, faits à la main. Commande par WhatsApp.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20120%20120%27%3E%3Crect%20x=%276%27%20y=%276%27%20width=%27108%27%20height=%27108%27%20rx=%2726%27%20fill=%27%23202321%27%20stroke=%27%23f2c21b%27%20stroke-width=%279%27/%3E%3Cg%20fill=%27none%27%20stroke=%27%23f6f6f2%27%20stroke-width=%277%27%20stroke-linecap=%27round%27%20stroke-linejoin=%27round%27%3E%3Cpath%20d=%27M31%2034V70H51%27/%3E%3Cpath%20d=%27M66%2070L78%2034L90%2070M70.5%2058H85.5%27/%3E%3C/g%3E%3Ccircle%20cx=%2758.5%27%20cy=%2770%27%20r=%274%27%20fill=%27%23f2c21b%27/%3E%3Cpath%20d=%27M28%2088C44%2080%2058%2096%2072%2088S90%2083%2094%2088%27%20fill=%27none%27%20stroke=%27%23f2c21b%27%20stroke-width=%275%27%20stroke-linecap=%27round%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Nunito:wght@400;700;800&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef0ec;--ink:#1b1c1a;--mute:#4a4d45;--card:#fafaf8;--line:#c9cdc5;--yel:#f2c21b;--chalk:#f6f6f2;--wall:#d6dcd4;--wt:#1b1c1a;--ws:#4a4d45;--nmc:#2a2c28;--ft:#f2c21b;--ftt:#1b1c1a;--ftl:#1b1c1a;--ftd:rgba(27,28,26,.35);--yt:#8f6200;--fy:#6b3a00;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171918;--ink:#f1f1ec;--mute:#a7a99f;--card:#222523;--line:#383b37;--wall:#161817;--wt:#f6f6f2;--ws:#b8b9b0;--nmc:#d8d9d0;--ft:#202321;--ftt:#f6f6f2;--ftl:#f2c21b;--ftd:#555;--yt:#f2c21b;--fy:#f2c21b}}
+:root[data-theme="dark"]{--bg:#171918;--ink:#f1f1ec;--mute:#a7a99f;--card:#222523;--line:#383b37;--wall:#161817;--wt:#f6f6f2;--ws:#b8b9b0;--nmc:#d8d9d0;--ft:#202321;--ftt:#f6f6f2;--ftl:#f2c21b;--ftd:#555;--yt:#f2c21b;--fy:#f2c21b}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Nunito,system-ui,sans-serif;overflow-x:hidden}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2px 14px;min-height:56px;padding-top:6px;padding-bottom:6px}
+#pg{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--yel)}
+.logo{font:1.3rem 'Fredericka the Great',Georgia,serif}
+.nav{display:flex;gap:18px;order:3;width:100%}@media(min-width:600px){.nav{order:0;width:auto}}
+.nav a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.93rem;padding:4px 0;border-bottom:2px solid transparent;transition:border-color .2s}.nav a:hover{border-color:var(--yel)}
+.cartbtn{background:var(--ink);color:var(--bg);border:0;border-radius:6px;padding:9px 14px;font:800 .95rem Nunito,sans-serif;cursor:pointer}
+h1,h2{font-family:'Fredericka the Great',Georgia,serif;line-height:1.1;margin:0 0 14px}
+h1{font-size:clamp(2rem,6vw,3.3rem)}h1.hs{font-family:'Fredericka the Great',Georgia,serif;font-weight:400;font-size:clamp(2rem,7vw,3.6rem);line-height:1.12;letter-spacing:0}h2{font-size:clamp(1.7rem,4.5vw,2.4rem)}
+.hero{padding:34px 0 20px;display:grid;gap:26px;align-items:center}@media(min-width:760px){.hero{grid-template-columns:1.1fr 1fr}}
+.lead{color:var(--mute);max-width:42ch;margin:0 0 20px}
+.cta{display:inline-block;background:var(--yel);color:#1b1c1a;font-weight:800;padding:12px 22px;border-radius:6px;text-decoration:none;border:0;cursor:pointer;font-size:1rem;font-family:inherit;transition:transform .2s}.cta:hover{transform:translateY(-3px)}
+.hb{background:#202321;border:9px solid var(--yel);color:var(--chalk);aspect-ratio:4/5;padding:22px 18px;text-align:center;display:flex;flex-direction:column;justify-content:space-between;max-width:380px;justify-self:center;width:100%;transform:rotate(1.5deg);transition:transform .5s;box-shadow:inset 0 0 40px rgba(255,255,255,.05)}
+.hb:hover{transform:rotate(-1deg) scale(1.03)}
+.stencil{font:800 1.7rem/1.2 'Fredericka the Great',Georgia,serif;border-bottom:2px solid var(--chalk);display:inline-block;padding-bottom:4px}
+.y{color:var(--yel)}.script{font:2.1rem 'Pinyon Script',cursive;letter-spacing:.04em}
+@keyframes wr{to{clip-path:inset(0 0 0 0)}}
+.hb .stencil,.hb .script{display:inline-block;clip-path:inset(0 100% 0 0);animation:wr 1.3s steps(16,end) forwards;text-shadow:0 0 6px rgba(255,255,255,.25)}
+.hb .stencil:nth-of-type(1){animation-delay:.4s}.hb .stencil:nth-of-type(2){animation-delay:1.8s}.hb>.script{animation-delay:3.2s}.hb>.last{animation-delay:4.6s}
+.cl{display:block;width:100%;height:36px;fill:none;stroke:var(--yt);stroke-width:3;stroke-dasharray:1400;stroke-dashoffset:1400;transition:stroke-dashoffset 1.8s ease}.cl.in{stroke-dashoffset:0}
+.w{clip-path:inset(0 100% 0 0);transition:clip-path 1.2s steps(18,end)}.w.in{clip-path:inset(0 0 0 0)}
+/* mur d'ardoises */
+.dark{background:var(--wall);color:var(--wt);padding:56px 0 76px;background-image:radial-gradient(ellipse at 20% 0,rgba(255,255,255,.06),transparent 55%)}
+.dark p.sub{color:var(--ws);margin:0 0 34px}
+.grid{display:grid;gap:34px 24px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+@media(min-width:700px){.it:nth-child(even){margin-top:38px}}
+.it{position:relative;opacity:0;transform-origin:50% 0;transition:transform .4s}
+.it::before{content:'';position:absolute;top:-6px;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:#bbb;z-index:3}
+.it.in{animation:hang 1.7s var(--d) cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes hang{0%{opacity:0;transform:translateY(-46px) rotate(-9deg)}35%{opacity:1;transform:rotate(5deg)}65%{transform:rotate(-2.5deg)}100%{opacity:1}}
+.it:hover{transform:translateY(-6px)}
+.flip{perspective:1000px;height:330px}
+.inner{position:relative;height:100%;transition:transform .8s cubic-bezier(.3,.7,.2,1);transform-style:preserve-3d}
+.it:hover .inner{transform:rotateY(180deg)}
+@media(hover:none){.it:hover .inner{transform:none}.it.on .inner,.it.on:hover .inner{transform:rotateY(180deg)}}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:grid;place-items:center;padding-bottom:30px}
+.nm{position:absolute;bottom:4px;left:0;right:0;text-align:center;font-weight:700;font-size:.9rem;color:var(--nmc)}
+.back{transform:rotateY(180deg);background:#202321;border:6px solid var(--yel);color:var(--chalk);display:flex;flex-direction:column;justify-content:center;align-items:stretch;gap:8px;padding:14px;text-align:left}
+.back b{font:1.05rem 'Fredericka the Great',serif}.back p{margin:0;font-size:.86rem;color:#c3c4bb}
+.back select,.back input{width:100%;padding:8px;border:1px solid #555;border-radius:6px;background:#2e322f;color:var(--chalk);font:inherit;font-size:.9rem}
+.buy{display:flex;align-items:center;justify-content:space-between;gap:8px}.price{font-weight:800}
+.add{background:var(--yel);color:#1b1c1a;border:0;border-radius:6px;padding:9px 14px;font:800 .9rem Nunito,sans-serif;cursor:pointer}
+.bd{position:relative;background:#202321;border:6px solid var(--yel);color:var(--chalk);padding:8px;display:flex;flex-direction:column;justify-content:center;gap:5px;text-align:center;font-size:.8rem;box-shadow:0 10px 22px rgba(0,0,0,.45);overflow:hidden}
+.bd.easel{overflow:visible}.bd.easel::before,.bd.easel::after{content:'';position:absolute;bottom:-24px;width:8px;height:28px;background:var(--yel)}.easel::before{left:22%;transform:rotate(8deg)}.easel::after{right:22%;transform:rotate(-8deg)}
+.s1{width:190px;height:226px}.s2{width:96%;height:120px}.s3{width:92%;height:190px}.s4{width:150px;height:190px;transform:rotate(-5deg)}.s5{width:164px;height:190px;margin-bottom:20px}.s6{width:230px;height:170px}.s7{width:182px;height:190px;margin-bottom:20px}
+.sc{font:1.45rem/1.15 'Pinyon Script',cursive}.r{letter-spacing:.12em;font-weight:700}.t{font-size:.74rem;opacity:.9}
+.g4{display:grid;grid-template-columns:1fr 1fr;gap:3px;height:100%}.g4 p{margin:0;border:1px solid #777;display:grid;place-items:center;font-size:.7rem;padding:2px}
+.st{font:800 1.1rem/1.2 'Fredericka the Great',serif;border-bottom:1.5px solid var(--chalk);padding-bottom:2px}.st.s{border:0;font-size:1rem}
+.smudge{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 30%,rgba(255,255,255,.14),transparent 55%),radial-gradient(ellipse at 70% 70%,rgba(255,255,255,.08),transparent 50%)}
+/* histoire */
+.story{display:grid;gap:30px;padding:30px 18px 50px;align-items:start}@media(min-width:800px){.story{grid-template-columns:1fr 1fr}}
+.story p{color:var(--mute);max-width:50ch}
+.hint{font-size:.85rem;margin:0 0 10px}
+.ovals{display:flex;flex-wrap:wrap;gap:10px 8px;margin-bottom:16px}
+.ov{border:2px solid var(--yel);background:transparent;color:var(--ink);border-radius:50%;padding:14px 22px;font:700 .95rem Nunito,sans-serif;cursor:pointer;transition:background .25s,transform .25s}
+.ov:hover,.ov:focus-visible,.ov.act{background:var(--yel);color:#1b1c1a;transform:rotate(-3deg) scale(1.06)}
+figure{margin:0;border:1px solid var(--line);background:var(--card);overflow:hidden}
+.phi{aspect-ratio:4/3;display:grid;place-items:center;text-align:center;color:var(--mute);font-size:.9rem;background:repeating-linear-gradient(135deg,var(--card),var(--card) 14px,var(--bg) 14px,var(--bg) 28px)}
+figcaption{padding:12px 14px;font-size:.93rem}
+figure.pop{animation:pop .6s}@keyframes pop{from{clip-path:inset(0 0 100% 0);transform:translateY(10px)}to{clip-path:inset(0);transform:none}}
+/* contact */
+.contact{padding:10px 18px 56px;max-width:620px}
+.contact form{display:grid;gap:10px}.contact input,textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit}textarea{min-height:100px}
+.foot{background:var(--ft);color:var(--ftt);border-top:9px solid var(--ftl);overflow:hidden;padding-bottom:22px}
+.mq{display:flex;width:max-content;animation:mq 38s linear infinite;font:1.5rem 'Pinyon Script',cursive;padding:14px 0;border-bottom:1px dashed var(--ftd);white-space:nowrap}.mq span{padding-right:26px}
+@keyframes mq{to{transform:translateX(-50%)}}
+.wm{font:clamp(2.6rem,12vw,8rem)/1.05 'Fredericka the Great',Georgia,serif;padding:26px 18px 6px;clip-path:inset(0 100% 0 0);transition:clip-path 2.4s ease-out;max-width:1080px;margin:0 auto}.foot.in .wm{clip-path:inset(0)}
+.fl{max-width:1080px;margin:0 auto;padding:0 18px;text-align:right}.fl a{color:var(--ftt);text-decoration:none;border-bottom:2px solid var(--ftl)}
+/* panier */
+.shade{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;z-index:8}
+.panel{position:fixed;top:0;right:0;bottom:0;width:min(400px,100%);background:var(--bg);z-index:9;transform:translateX(105%);transition:transform .25s;padding:calc(18px + env(safe-area-inset-top,0px)) 18px calc(18px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;border-left:3px solid var(--yel)}
+.open .panel{transform:none}.open .shade{display:block}
+.lines{flex:1;overflow:auto;margin:12px 0}.line{display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.93rem}.line small{color:var(--mute)}
+.qty{display:flex;gap:6px;align-items:center}.qty button{width:28px;height:28px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-weight:800}
+.tot{display:flex;justify-content:space-between;font-weight:800;font-size:1.15rem;margin-bottom:6px}.note{font-size:.82rem;color:var(--mute);margin:0 0 10px}.empty{color:var(--mute);padding:20px 0}
+.panel input{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit;margin-bottom:10px}
+.x{background:none;border:0;color:var(--ink);font-size:1.6rem;cursor:pointer;float:right;line-height:1}
+button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid var(--yel);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.hb *,.w,.wm{clip-path:none!important}.cl{stroke-dashoffset:0}.it{opacity:1}}
+.foot .y{color:var(--fy)}h1.hs .y{color:var(--yt)}
+.phi{display:block;position:relative;overflow:hidden;cursor:pointer;background:#222}
+.sl{position:absolute;inset:0;opacity:0;transition:opacity .9s}.sl.on{opacity:1}.sl svg{width:100%;height:100%;display:block}
+.msg{position:absolute;left:0;right:0;bottom:0;padding:44px 16px 16px;background:linear-gradient(transparent,rgba(0,0,0,.78));color:#fff;font:clamp(1.35rem,4.8vw,2.2rem)/1.1 'Fredericka the Great',Georgia,serif;transform:translateY(10px);transition:transform .9s}.sl.on .msg{transform:none}
+.dots{position:absolute;top:10px;right:12px;display:flex;gap:6px}.dots i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.55)}.dots i.on{background:var(--yel)}
+/* infos pratiques, galerie, mentions */
+.info{padding:10px 18px 36px}.cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:14px 0 26px}
+.ic{background:var(--card);border:1px solid var(--line);padding:16px 16px 18px}.ic b{display:block;font:1.15rem 'Fredericka the Great',Georgia,serif;margin-bottom:6px}.ic p{margin:0;color:var(--mute);font-size:.94rem}
+.find{display:grid;gap:8px 28px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));background:var(--card);border:1px solid var(--line);padding:18px}.find div small{display:block;color:var(--mute);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}.find a{color:var(--ink);font-weight:700;text-underline-offset:3px}
+.gal{padding:10px 18px 40px}.gg{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));margin-top:14px}.gg figure{cursor:zoom-in;transition:transform .25s}.gg figure:hover{transform:translateY(-4px)}.gg img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:12;display:none;align-items:center;justify-content:center;flex-direction:column;gap:10px;padding:18px}.lb.on{display:flex}.lb img{max-width:100%;max-height:80vh;border:6px solid var(--yel)}.lb span{color:#fff;font-weight:700}
+.legal{max-width:1080px;margin:14px auto 0;padding:0 18px;font-size:.85rem}.legal a{color:var(--ftt)}
+/* arrondis + survol léger */
+.hb{border-radius:28px}.bd{border-radius:16px}.back{border-radius:20px}
+.cta,.add,.cartbtn{border-radius:12px;transition:transform .2s,box-shadow .2s}.add:hover,.cartbtn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.contact input,textarea,.panel input,.back select,.back input{border-radius:12px}
+figure{border-radius:20px}.qty button{border-radius:10px}.panel{border-radius:22px 0 0 22px}.lb img{border-radius:18px}
+.ic,.find{border-radius:20px;transition:transform .25s,box-shadow .25s}.ic:hover,.find:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(0,0,0,.14)}
+.logo{display:flex;align-items:center;gap:10px}.ly{color:var(--yt);font-weight:400}.lg{display:block;border-radius:10px;transition:transform .3s}.logo:hover .lg{transform:rotate(-6deg) scale(1.06)}
+#cap{display:none}
+</style>
+</head>
+<body id="top">
+<header><div class="wrap"><div class="logo"><img class="lg" src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20120%20120%27%3E%3Crect%20x=%276%27%20y=%276%27%20width=%27108%27%20height=%27108%27%20rx=%2726%27%20fill=%27%23202321%27%20stroke=%27%23f2c21b%27%20stroke-width=%279%27/%3E%3Cg%20fill=%27none%27%20stroke=%27%23f6f6f2%27%20stroke-width=%277%27%20stroke-linecap=%27round%27%20stroke-linejoin=%27round%27%3E%3Cpath%20d=%27M31%2034V70H51%27/%3E%3Cpath%20d=%27M66%2070L78%2034L90%2070M70.5%2058H85.5%27/%3E%3C/g%3E%3Ccircle%20cx=%2758.5%27%20cy=%2770%27%20r=%274%27%20fill=%27%23f2c21b%27/%3E%3Cpath%20d=%27M28%2088C44%2080%2058%2096%2072%2088S90%2083%2094%2088%27%20fill=%27none%27%20stroke=%27%23f2c21b%27%20stroke-width=%275%27%20stroke-linecap=%27round%27/%3E%3C/svg%3E" width="40" height="40" alt="Logo L.A Ardoise"><span><b class="ly">L.A</b> Ardoise</span></div><nav class="nav" aria-label="Navigation"><a href="#produits">Nos ardoises</a><a href="#histoire">Notre histoire</a><a href="#infos" id="navinfo">Infos pratiques</a><a href="#contact">Contact</a></nav><button class="cartbtn" id="cartbtn" aria-label="Ouvrir le panier">Panier (<span id="count">0</span>)</button></div><i id="pg"></i></header>
+
+<main>
+<section class="wrap hero">
+<div><h1 class="hs">Écrivez vos idées.<br><span class="y">En lettres mémorables.</span></h1><p class="lead">Alphabets, géométrie, menus du jour et tableaux sur chevalet.</p><a class="cta" href="#produits">Voir les ardoises</a></div>
+<div class="hb" aria-hidden="true"><div><span class="stencil">RESTAURANT</span><br><span class="stencil" style="margin-top:10px">MENU DU <span class="y">JOUR</span></span></div><div class="script">a b c d <span class="y">e</span> f g h <span class="y">i</span></div><div class="stencil last" style="border:0;font-size:1.3rem">BON APP<span class="y">ETIT</span></div></div>
+</section>
+<svg class="cl" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1400" d="M0 20C150 4 300 36 450 20S750 4 900 20 1100 32 1200 16"/></svg>
+
+<section id="produits" class="dark"><div class="wrap">
+<h2 class="w">Nos ardoises</h2><p class="sub" id="sub">Passez sur une ardoise pour la retourner.</p>
+<div class="grid" id="grid"></div></div></section>
+
+<svg class="cl" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true" style="margin-top:-1px"><path pathLength="1400" d="M0 16C200 34 350 4 600 20S1000 32 1200 12"/></svg>
+<section id="histoire" class="wrap story"><div><h2 class="w">Notre histoire</h2>
+<p>Une bonne ardoise sert autant à apprendre qu’à écrire. Nous fabriquons des alphabets, des tableaux de géométrie, des menus du jour et des tableaux sur chevalet, pour les classes, les restaurants et les boutiques.</p></div>
+<div><p class="hint">Passez sur un mot pour voir l’atelier.</p><div class="ovals"><button class="ov" data-i="0">Lettrage à la main</button><button class="ov" data-i="1">Sur mesure</button><button class="ov" data-i="2">Cadre en bois</button><button class="ov" data-i="3">Finitions soignées</button></div>
+<figure id="ph"><div class="phi" id="phi"></div><figcaption id="cap"></figcaption></figure></div></section>
+
+<svg class="cl" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1400" d="M0 20C150 4 300 36 450 20S750 4 900 20 1100 32 1200 16"/></svg>
+<section id="infos" class="wrap info"></section>
+<section id="galerie" class="wrap gal" hidden></section>
+<div class="lb" id="lb" role="dialog" aria-label="Photo"><img id="lbi" alt=""><span id="lbc"></span></div>
+<section id="contact" class="wrap contact"><h2 class="w">Écrivez-nous</h2>
+<form><input type="text" id="cn" placeholder="Votre nom" aria-label="Votre nom"><textarea id="cm" placeholder="Votre message" aria-label="Votre message"></textarea><button type="button" class="cta" id="cb">Envoyer sur WhatsApp</button></form></section>
+</main>
+
+<footer class="foot" id="foot"><div class="mq" aria-hidden="true"><span>a b c d <i class="y">e</i> f g h <i class="y">i</i> j k l m n <i class="y">o</i> p q r s t <i class="y">u</i> v w x <i class="y">y</i> z · 0 1 2 3 4 5 6 7 8 9 10 ·</span><span>a b c d <i class="y">e</i> f g h <i class="y">i</i> j k l m n <i class="y">o</i> p q r s t <i class="y">u</i> v w x <i class="y">y</i> z · 0 1 2 3 4 5 6 7 8 9 10 ·</span></div>
+<div class="wm"><span class="y">L.A</span> Ardoise</div><div class="legal" id="legal"></div><div class="fl"><a href="#top">Retour en haut</a></div></footer>
+
+<div class="shade" id="shade"></div>
+<aside class="panel" aria-label="Panier"><button class="x" id="close" aria-label="Fermer le panier">&times;</button>
+<h2 style="font-size:1.5rem;margin:0">Votre panier</h2><div class="lines" id="lines"></div>
+<div class="tot"><span>Total</span><span id="total">0 FCFA</span></div>
+<p class="note">Le prix final, le paiement et la livraison sont confirmés par message.</p>
+<input type="text" id="who" placeholder="Votre nom et ville" aria-label="Votre nom et ville">
+<a class="cta" id="order" href="#" style="text-align:center">Commander sur WhatsApp</a></aside>
+
+<script>
+var WA="237600000000"; /* remplacez par votre numéro WhatsApp, format international sans + */
+var Y=function(s){return `<span class='y'>${s}</span>`};
+var ART={
+1:`<div class='sc'>a b c d ${Y('e')} f g</div><div class='sc'>h ${Y('i')} j k l m n</div><div class='r'>0 1 2 3 4 5</div><div class='t'>ba be bi bo bu</div>`,
+2:`<div class='sc'>a b c d ${Y('e')} f g h ${Y('i')} j k l m</div><div class='r'>a-b-c-d-${Y('e')}-f-g-h-${Y('i')}-j-k</div><div class='t'>zéro · un · deux · trois<br>zero · one · two · three</div>`,
+3:`<div class='g4'><p>a-b-c-d<br>e-f-g-h</p><p class='sc'>a b c d<br>e f g</p><p class='sc'>A B C D<br>E F G</p><p class='r'>ABCD<br>EFGH</p></div>`,
+4:`<svg viewBox='0 0 170 110' width='100%' height='100%' fill='none' stroke='#f6f6f2' stroke-width='1.6'><rect x='8' y='8' width='34' height='34'/><path d='M62 42h38L81 8z'/><circle cx='138' cy='25' r='18'/><path d='M12 96l16-30h34l-16 30z'/><path d='M82 66h30l15 15-15 15H82l-15-15z'/><g fill='#f6f6f2' stroke='none' font-size='7'><text x='9' y='52'>Carré</text><text x='64' y='52'>Triangle</text><text x='122' y='52'>Cercle</text><text x='20' y='106' fill='#f2c21b'>Losange</text><text x='86' y='106' fill='#f2c21b'>Hexagone</text></g></svg>`,
+5:`<div class='st'>RESTAURANT</div><div class='st'>MENU DU ${Y('JOUR')}</div><div style='height:30px'></div><div class='st s'>BON APP${Y('ETIT')}</div>`,
+6:`<div class='smudge'></div>`,
+7:`<div class='sc'>a b c ${Y('e')}</div><div class='r'>0 1 2 3</div><div class='t'>zéro un deux</div>`,
+8:`<div class='t' style='font-size:.95rem;line-height:1.7'>${['b','d','l','m'].map(function(c){return 'aeiou'.split('').map(function(v){return c+Y(v)}).join(' ')}).join('<br>')}</div>`,
+9:`<div class='st s'>AUJOURD’HUI</div><div class='t' style='font-size:.85rem;line-height:1.8;text-align:left'>Tomates …… 500<br>Oignons …… 300<br>Bananes …… ${Y('250')}</div>`};
+var SH={1:'s1',2:'s2',3:'s3',4:'s6',5:'s5 easel',6:'s7 easel',7:'s4',8:'s1',9:'s5 easel'};
+var P=[
+{id:1,name:'Alphabet français cursif',d:'Lettres cursives, chiffres de 0 à 10 et syllabes.',sizes:{'40 × 60 cm':9000,'60 × 80 cm':14000}},
+{id:2,name:'Alphabet English / Français',d:'Alphabet et nombres de 0 à 20 dans les deux langues.',sizes:{'40 × 90 cm':11000,'60 × 120 cm':18000}},
+{id:3,name:'Majuscules et minuscules',d:'Quatre cadres : minuscules, cursives et bâton.',sizes:{'60 × 80 cm':15000,'80 × 100 cm':22000}},
+{id:4,name:'Géométrie et formules',d:'Figures, angles et formules de périmètre et d’aire.',sizes:{'50 × 70 cm':13000,'70 × 100 cm':21000}},
+{id:5,name:'Menu du jour sur chevalet',d:'Tableau avec pied en bois, titre tracé à la main.',sizes:{'50 × 70 cm':18000,'60 × 90 cm':25000},custom:'Nom du restaurant (facultatif)'},
+{id:6,name:'Tableau vierge sur chevalet',d:'Grand tableau noir mat, prêt à écrire.',sizes:{'80 × 80 cm':20000,'100 × 100 cm':28000}},
+{id:7,name:'Mini-ardoise élève',d:'À poser sur la table : alphabet cursif et chiffres.',sizes:{'20 × 30 cm':3500}},
+{id:8,name:'Tableau des syllabes',d:'De ba à mu, voyelles en jaune, pour lire pas à pas.',sizes:{'60 × 80 cm':14000,'80 × 100 cm':20000}},
+{id:9,name:'Ardoise prix du jour',d:'Pour marchés et boutiques : produits et prix à la main.',sizes:{'40 × 50 cm':9000,'50 × 70 cm':13000},custom:'Produits et prix à tracer'}];
+var cart=[],fmt=function(n){return n.toLocaleString('fr-FR')+' FCFA'},G=document.getElementById('grid'),touch=matchMedia('(hover:none)').matches;
+if(touch)document.getElementById('sub').textContent='Touchez une ardoise pour la retourner.';
+P.forEach(function(p,i){var k=Object.keys(p.sizes),a=document.createElement('article');a.className='it';a.style.setProperty('--d',(i%3*.15)+'s');
+a.innerHTML="<div class='flip'><div class='inner'><div class='face' aria-hidden='true'><div class='bd "+SH[p.id]+"'>"+ART[p.id]+"</div><div class='nm'>"+p.name+"</div></div><div class='face back'><b>"+p.name+"</b><p>"+p.d+"</p><select aria-label='Taille'>"+k.map(function(s){return '<option>'+s+'</option>'}).join('')+"</select>"+(p.custom?"<input type='text' placeholder='"+p.custom+"' aria-label='"+p.custom+"'>":"")+"<div class='buy'><span class='price'>"+fmt(p.sizes[k[0]])+"</span><button class='add'>Ajouter</button></div></div></div></div>";
+var s=a.querySelector('select'),pr=a.querySelector('.price'),n=a.querySelector('input');
+s.onchange=function(){pr.textContent=fmt(p.sizes[s.value])};
+a.querySelector('.back').onclick=function(e){e.stopPropagation()};
+a.querySelector('.add').onclick=function(){add(p,s.value,n?n.value.trim():'')};
+a.onclick=function(){if(touch)a.classList.toggle('on')};G.appendChild(a)});
+function add(p,size,note){var k=p.id+size+note,l=cart.filter(function(x){return x.k===k})[0];if(l)l.q++;else cart.push({k:k,name:p.name,size:size,note:note,price:p.sizes[size],q:1});render();document.body.classList.add('open')}
+function render(){var L=document.getElementById('lines'),t=0,n=0;L.innerHTML='';
+if(!cart.length)L.innerHTML="<div class='empty'>Votre panier est vide.</div>";
+cart.forEach(function(x,i){t+=x.price*x.q;n+=x.q;var d=document.createElement('div');d.className='line';
+d.innerHTML="<b>"+x.name+"</b><div class='qty'><button aria-label='Moins'>−</button>"+x.q+"<button aria-label='Plus'>+</button></div><small>"+x.size+(x.note?' · '+x.note.replace(/</g,'&lt;'):'')+' · '+fmt(x.price*x.q)+"</small>";
+var b=d.querySelectorAll('button');b[0].onclick=function(){x.q--;if(x.q<1)cart.splice(i,1);render()};b[1].onclick=function(){x.q++;render()};L.appendChild(d)});
+document.getElementById('count').textContent=n;document.getElementById('total').textContent=fmt(t)}
+var $=function(i){return document.getElementById(i)};
+$('cartbtn').onclick=function(){document.body.classList.add('open')};
+$('close').onclick=$('shade').onclick=function(){document.body.classList.remove('open')};
+$('order').onclick=function(e){e.preventDefault();if(!cart.length){alert('Ajoutez d’abord une ardoise au panier.');return}
+var w=$('who').value.trim(),m='Bonjour, je souhaite commander :\n';cart.forEach(function(x){m+='- '+x.q+' × '+x.name+' ('+x.size+')'+(x.note?' – '+x.note:'')+'\n'});
+m+='Total : '+$('total').textContent+(w?'\nClient : '+w:'');window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(m),'_blank')};
+$('cb').onclick=function(){var n=$('cn').value.trim();window.open('https://wa.me/'+WA+'?text='+encodeURIComponent('Bonjour, '+$('cm').value.trim()+(n?'\n– '+n:'')),'_blank')};
+var AT=[['Chaque lettre est tracée une à une, avec les voyelles en jaune pour guider l’enfant.','Lettrage à la main'],['Taille, texte et couleurs : votre tableau est pensé pour votre école, votre boutique ou votre restaurant.','Tableau sur mesure'],['Un cadre jaune solide et un fond noir mat qui ne brille pas sous la lumière.','Cadre en bois']];
+document.querySelectorAll('.ov').forEach(function(b){function go(){var a=AT[b.dataset.i],f=$('ph');document.querySelectorAll('.ov').forEach(function(o){o.classList.remove('act')});b.classList.add('act');
+$('cap').textContent=a[0];$('phi').textContent='Photo : '+a[1]+' (à ajouter)';f.classList.remove('pop');void f.offsetWidth;f.classList.add('pop')}
+b.onmouseenter=go;b.onfocus=go;b.onclick=go});
+var els=document.querySelectorAll('.w,.cl,.it,.foot');
+try{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.2});els.forEach(function(e){io.observe(e)})}catch(x){els.forEach(function(e){e.classList.add('in')})}
+addEventListener('scroll',function(){var h=document.documentElement;$('pg').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
+render();
+</script>
+<script>
+var LG='fr',curAT=-1;
+var EN={'Nos ardoises':'Our slates','Notre histoire':'Our story','Panier (':'Cart (','Écrivez vos idées.':'Write your ideas.','En lettres mémorables.':'In memorable letters.','Alphabets, géométrie, menus du jour et tableaux sur chevalet.':'Alphabets, geometry, menus of the day and easel boards.','Voir les ardoises':'See the slates','Une bonne ardoise sert autant à apprendre qu’à écrire. Nous fabriquons des alphabets, des tableaux de géométrie, des menus du jour et des tableaux sur chevalet, pour les classes, les restaurants et les boutiques.':'A good slate is for learning as much as for writing. We make alphabets, geometry boards, menus of the day and easel boards for classrooms, restaurants and shops.','Passez sur un mot pour voir l’atelier.':'Hover over a word to see the workshop.','Lettrage à la main':'Hand lettering','Sur mesure':'Made to order','Cadre en bois':'Wooden frame','Écrivez-nous':'Write to us','Envoyer sur WhatsApp':'Send on WhatsApp','Votre panier':'Your cart','Le prix final, le paiement et la livraison sont confirmés par message.':'The final price, payment and delivery are confirmed by message.','Commander sur WhatsApp':'Order on WhatsApp','Retour en haut':'Back to top','Votre nom':'Your name','Votre message':'Your message','Votre nom et ville':'Your name and city','Ouvrir le panier':'Open the cart','Fermer le panier':'Close the cart'};
+var PE={1:['French cursive alphabet','Cursive letters, numbers 0 to 10 and syllables.'],2:['English / French alphabet','Alphabet and numbers 0 to 20 in both languages.'],3:['Capitals and lowercase','Four frames: lowercase, cursive and block capitals.'],4:['Geometry and formulas','Shapes, angles and perimeter and area formulas.'],5:['Menu of the day on an easel','Board with a wooden stand, title lettered by hand.','Restaurant name (optional)'],6:['Blank easel board','Large matte black board, ready to write on.'],7:['Student mini slate','For the desk: cursive alphabet and numbers.'],8:['Syllable chart','From ba to mu, vowels in yellow, to read step by step.'],9:['Price of the day slate','For markets and shops: products and prices by hand.','Products and prices to write']};
+var ATE=[['Each letter is drawn one by one, with the vowels in yellow to guide the child.','Hand lettering'],['Size, text and colors: your board is designed for your school, shop or restaurant.','Made-to-order board'],['A solid yellow frame and a matte black surface that stays glare-free under light.','Wooden frame']];
+function tr(en){var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n,L=[];
+while(n=w.nextNode()){if(n.parentNode.closest('script,style,#ph,#grid,#lines,#sub'))continue;L.push(n)}
+L.forEach(function(n){if(n._fr===undefined)n._fr=EN[n.nodeValue.trim()]?n.nodeValue:null;if(n._fr!==null){var k=n._fr.trim();n.nodeValue=en?n._fr.replace(k,EN[k]):n._fr}});
+document.querySelectorAll('[placeholder],[aria-label]').forEach(function(e){if(e.closest('#grid'))return;e._a=e._a||{};['placeholder','aria-label'].forEach(function(a){var v=e.getAttribute(a);if(v===null)return;if(e._a[a]===undefined)e._a[a]=v;e.setAttribute(a,en?(EN[e._a[a]]||e._a[a]):e._a[a])})})}
+function build(){G.innerHTML='';var en=LG==='en';P.forEach(function(p){var k=Object.keys(p.sizes),a=document.createElement('article'),nm=en?PE[p.id][0]:p.name,ds=en?PE[p.id][1]:p.d,cu=p.custom?(en?PE[p.id][2]:p.custom):'';
+a.className='it in';a.style.animation='none';a.style.opacity=1;
+a.innerHTML=`<div class='flip'><div class='inner'><div class='face' aria-hidden='true'><div class='bd ${SH[p.id]}'>${ART[p.id]}</div><div class='nm'>${nm}</div></div><div class='face back'><b>${nm}</b><p>${ds}</p><select aria-label='${en?'Size':'Taille'}'>${k.map(function(s){return '<option>'+s+'</option>'}).join('')}</select>${p.custom?`<input type='text' placeholder='${cu}' aria-label='${cu}'>`:''}<div class='buy'><span class='price'>${fmt(p.sizes[k[0]])}</span><button class='add'>${en?'Add':'Ajouter'}</button></div></div></div></div>`;
+var s=a.querySelector('select'),pr=a.querySelector('.price'),i=a.querySelector('input');
+s.onchange=function(){pr.textContent=fmt(p.sizes[s.value])};a.querySelector('.back').onclick=function(e){e.stopPropagation()};
+a.querySelector('.add').onclick=function(){add(p,s.value,i?i.value.trim():'')};a.onclick=function(){if(touch)a.classList.toggle('on')};G.appendChild(a)})}
+function add(p,size,note){var k=p.id+size+note,l=cart.filter(function(x){return x.k===k})[0];if(l)l.q++;else cart.push({k:k,id:p.id,price:p.sizes[size],size:size,note:note,q:1});render();document.body.classList.add('open')}
+function pn(x){return LG==='en'?PE[x.id][0]:P.filter(function(q){return q.id===x.id})[0].name}
+function render(){var L=$('lines'),t=0,n=0;L.innerHTML='';if(!cart.length)L.innerHTML=`<div class='empty'>${LG==='en'?'Your cart is empty.':'Votre panier est vide.'}</div>`;
+cart.forEach(function(x,i){t+=x.price*x.q;n+=x.q;var d=document.createElement('div');d.className='line';d.innerHTML=`<b>${pn(x)}</b><div class='qty'><button aria-label='−'>−</button>${x.q}<button aria-label='+'>+</button></div><small>${x.size}${x.note?' · '+x.note.replace(/</g,'&lt;'):''} · ${fmt(x.price*x.q)}</small>`;
+var b=d.querySelectorAll('button');b[0].onclick=function(){x.q--;if(x.q<1)cart.splice(i,1);render()};b[1].onclick=function(){x.q++;render()};L.appendChild(d)});
+$('count').textContent=n;$('total').textContent=fmt(t)}
+$('order').onclick=function(e){e.preventDefault();var en=LG==='en';if(!cart.length){alert(en?'Add a slate to your cart first.':'Ajoutez d’abord une ardoise au panier.');return}
+var w=$('who').value.trim(),m=en?'Hello, I would like to order:\n':'Bonjour, je souhaite commander :\n';cart.forEach(function(x){m+='- '+x.q+' × '+pn(x)+' ('+x.size+')'+(x.note?' – '+x.note:'')+'\n'});
+m+='Total : '+$('total').textContent+(w?(en?'\nCustomer: ':'\nClient : ')+w:'');window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(m),'_blank')};
+$('cb').onclick=function(){var n=$('cn').value.trim();window.open('https://wa.me/'+WA+'?text='+encodeURIComponent((LG==='en'?'Hello, ':'Bonjour, ')+$('cm').value.trim()+(n?'\n– '+n:'')),'_blank')};
+function setAT(i,anim){var en=LG==='en',a=(en?ATE:AT)[Math.max(i,0)],f=$('ph');document.querySelectorAll('.ov').forEach(function(o,j){o.classList.toggle('act',j===i)});
+$('cap').textContent=a[0];$('phi').textContent=i<0?(en?'Workshop photo to be added':'Photo de l’atelier à ajouter'):(en?'Photo: '+a[1]+' (to be added)':'Photo : '+a[1]+' (à ajouter)');
+if(anim){f.classList.remove('pop');void f.offsetWidth;f.classList.add('pop')}}
+document.querySelectorAll('.ov').forEach(function(b){var go=function(){curAT=+b.dataset.i;setAT(curAT,true)};b.onmouseenter=go;b.onfocus=go;b.onclick=go});
+var lg=document.createElement('button'),rt=document.createElement('div');lg.textContent='EN';lg.setAttribute('aria-label','Switch to English');
+lg.style.cssText='background:transparent;color:var(--ink);border:2px solid var(--ink);border-radius:6px;padding:7px 11px;font:800 .9rem Nunito,sans-serif;cursor:pointer';
+rt.style.cssText='display:flex;gap:8px;align-items:center';$('cartbtn').parentNode.insertBefore(rt,$('cartbtn'));rt.appendChild(lg);rt.appendChild($('cartbtn'));
+function setLang(l){LG=l;var en=l==='en';document.documentElement.lang=l;document.title=en?'L.A Ardoise – Boards to write on and display':'L.A Ardoise – Tableaux pour écrire et afficher';tr(en);
+$('sub').textContent=en?(touch?'Tap a slate to flip it.':'Hover over a slate to flip it.'):(touch?'Touchez une ardoise pour la retourner.':'Passez sur une ardoise pour la retourner.');
+build();render();setAT(curAT,false);lg.textContent=en?'FR':'EN';lg.setAttribute('aria-label',en?'Passer en français':'Switch to English')}
+lg.onclick=function(){setLang(LG==='fr'?'en':'fr')};
+var th=document.createElement('button');th.style.cssText=lg.style.cssText;rt.insertBefore(th,lg);
+function isDark(){var t=document.documentElement.getAttribute('data-theme');return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches}
+function updTh(){var en=LG==='en',d=isDark();th.textContent=d?(en?'☀ Light':'☀ Clair'):(en?'☾ Dark':'☾ Sombre');th.setAttribute('aria-label',d?(en?'Switch to light mode':'Passer en mode clair'):(en?'Switch to dark mode':'Passer en mode sombre'))}
+th.onclick=function(){document.documentElement.setAttribute('data-theme',isDark()?'light':'dark');updTh()};
+var _sl=setLang;setLang=function(l){_sl(l);updTh()};updTh();
+AT.push(['Contrôle, fixations et emballage : chaque ardoise part en bon état.','Finitions soignées']);ATE.push(['Checks, fixings and packaging: every slate leaves in good condition.','Careful finishing']);EN['Finitions soignées']='Careful finishing';
+function B(bg,x){return `<svg viewBox='0 0 400 300' preserveAspectRatio='xMidYMid slice'><rect width='400' height='300' fill='${bg}'/><path d='M0 50H400M0 120H400M0 200H400M0 265H400' stroke='#000' stroke-opacity='.12' stroke-width='3'/><rect x='40' y='28' width='320' height='244' fill='#1d201e' stroke='#f2c21b' stroke-width='14'/>${x}</svg>`}
+function V(x){return `<svg viewBox='0 0 400 300' preserveAspectRatio='xMidYMid slice'>${x}</svg>`}
+var PS="font-family='Pinyon Script' fill='#f6f6f2'",FS="font-family='Fredericka the Great' fill='#f6f6f2'";
+var TS=[[
+['Chaque lettre, tracée à la main.','Every letter, drawn by hand.',B('#6f5233',`<text x='200' y='165' text-anchor='middle' ${PS} font-size='84'>Bonjour</text><g transform='rotate(-38 300 215)'><rect x='296' y='190' width='9' height='80' fill='#c9a36b'/><rect x='294' y='172' width='13' height='22' fill='#bbb'/><path d='M294 172q7-30 13 0z' fill='#f6f6f2'/></g>`)],
+['Les voyelles en jaune, pour mieux lire.','Vowels in yellow, to read better.',B('#5d4630',`<text x='200' y='150' text-anchor='middle' ${PS} font-size='70'>a <tspan fill='#f2c21b'>e</tspan> b <tspan fill='#f2c21b'>i</tspan> c</text><text x='200' y='225' text-anchor='middle' ${PS} font-size='60'>d <tspan fill='#f2c21b'>o</tspan> f <tspan fill='#f2c21b'>u</tspan> g</text>`)],
+['Un trait net, pensé pour durer.','A clean line, made to last.',B('#74573a',`<path d='M70 110H330M70 170H330M70 230H330' stroke='#f6f6f2' stroke-opacity='.45' stroke-dasharray='5 5'/><text x='72' y='170' ${PS} font-size='78'>abc</text><circle cx='330' cy='80' r='10' fill='#f2c21b'/>`)]],[
+['Votre taille, au centimètre.','Your size, to the centimeter.',B('#4e5a52',`<path d='M40 292H360M40 286V298M360 286V298' stroke='#f6f6f2' stroke-width='3'/><text x='200' y='155' text-anchor='middle' ${FS} font-size='34'>60 × 80 cm</text>`)],
+['Vos couleurs, votre style.','Your colors, your style.',B('#5a4f6a',`<circle cx='110' cy='150' r='30' fill='#f2c21b'/><circle cx='185' cy='150' r='30' fill='#f6f6f2'/><circle cx='260' cy='150' r='30' fill='#a7a99f'/><circle cx='320' cy='150' r='22' fill='#6b6e66'/><text x='200' y='235' text-anchor='middle' ${PS} font-size='50'>vos couleurs</text>`)],
+['Votre message, tracé pour vous.','Your message, lettered for you.',B('#6b5a45',`<text x='200' y='105' text-anchor='middle' ${FS} font-size='32'>MENU DU <tspan fill='#f2c21b'>JOUR</tspan></text><path d='M110 118H290' stroke='#f6f6f2' stroke-width='3'/><text x='200' y='170' text-anchor='middle' ${PS} font-size='40'>Plat du chef · 3 500</text><text x='200' y='225' text-anchor='middle' ${PS} font-size='40'>Dessert · 1 000</text>`)]],[
+['Un bois solide, assemblé avec soin.','Solid wood, carefully assembled.',V(`<rect width='400' height='300' fill='#1d201e'/><path d='M0 0H400V70H70V300H0z' fill='#f2c21b'/><path d='M0 0L70 70' stroke='#a37f00' stroke-width='4'/><path d='M70 70H400M70 70V300' stroke='#000' stroke-opacity='.25' stroke-width='6'/><path d='M0 30H400M30 0V300' stroke='#a37f00' stroke-opacity='.3' stroke-width='2'/>`)],
+['Un jaune franc, impossible à rater.','A bold yellow you can’t miss.',V(`<rect width='400' height='300' fill='#1d201e'/><rect x='20' y='20' width='360' height='260' fill='none' stroke='#f2c21b' stroke-width='46'/><path d='M0 0L400 300' stroke='#fff' stroke-opacity='.12' stroke-width='60'/>`)],
+['Un fond noir mat, sans reflets.','A matte black surface, no glare.',V(`<rect width='400' height='300' fill='#202321'/><ellipse cx='140' cy='90' rx='190' ry='110' fill='#fff' fill-opacity='.06'/><rect x='6' y='6' width='388' height='288' fill='none' stroke='#f2c21b' stroke-width='12'/>`)]],[
+['Chaque coin vérifié.','Every corner checked.',B('#5f6a62',`<path d='M60 62l10 10 20-22M310 62l10 10 20-22M60 232l10 10 20-22M310 232l10 10 20-22' stroke='#f2c21b' stroke-width='6' fill='none'/><text x='200' y='160' text-anchor='middle' ${PS} font-size='60'>contrôlé</text>`)],
+['Prêt à accrocher.','Ready to hang.',B('#6f6a60',`<path d='M110 24L200 -14L290 24' stroke='#d9c9a0' stroke-width='3' fill='none'/><circle cx='110' cy='24' r='6' fill='#bbb'/><circle cx='290' cy='24' r='6' fill='#bbb'/><text x='200' y='160' text-anchor='middle' ${PS} font-size='56'>prêt à accrocher</text>`)],
+['Livré bien protégé.','Delivered well protected.',V(`<rect width='400' height='300' fill='#8a6a45'/><path d='M60 120L200 70L340 120V250L200 290L60 250z' fill='#c19a65'/><path d='M60 120L200 170L340 120M200 170V290' stroke='#8d6b3c' stroke-width='3' fill='none'/><path d='M170 170h60v50h-60z' fill='#e9d9b0' fill-opacity='.8'/>`)]]];
+var stI=0,tm=null;
+function adv(){var s=document.querySelectorAll('#phi .sl');if(!s.length)return;s[stI].classList.remove('on');stI=(stI+1)%s.length;s[stI].classList.add('on');document.querySelectorAll('#phi .dots i').forEach(function(d,j){d.classList.toggle('on',j===stI)})}
+setAT=function(i,anim){var en=LG==='en',t=Math.max(i,0),a=(en?ATE:AT)[t];document.querySelectorAll('.ov').forEach(function(o,j){o.classList.toggle('act',j===i)});$('cap').textContent=a[0];
+$('phi').innerHTML=TS[t].map(function(s,j){return `<div class='sl${j?'':' on'}'>${s[2]}<div class='msg'>${en?s[1]:s[0]}</div></div>`}).join('')+`<div class='dots'>${TS[t].map(function(s,j){return `<i class='${j?'':'on'}'></i>`}).join('')}</div>`;
+stI=0;clearInterval(tm);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)tm=setInterval(adv,3600);
+if(anim){var f=$('ph');f.classList.remove('pop');void f.offsetWidth;f.classList.add('pop')}};
+document.querySelectorAll('.ov').forEach(function(b){var go=function(){if(curAT===+b.dataset.i)return;curAT=+b.dataset.i;setAT(curAT,true)};b.onmouseenter=go;b.onfocus=go;b.onclick=go});
+$('phi').onclick=adv;setAT(curAT,false);
+</script>
+<script src="galerie.js" onerror="this.remove()"></script>
+<script>
+/* ===== Coordonnées : EXEMPLES FICTIFS, à remplacer par les vraies ===== */
+var SITE={addr:'12 rue des Ardoises, Akwa, Douala, Cameroun',tel:'+237 600 00 00 00',mail:'contact@laardoise.example',fb:'https://facebook.com/laardoise.exemple',ig:'https://instagram.com/laardoise.exemple',legal:'Atelier L.A Ardoise · RCCM RC/DLA/2026/A/0000 · NIU M000000000000A'};
+var TX={
+fr:{nav:'Infos pratiques',h:'Commander, payer, livrer',steps:[['1. Choisissez','Ajoutez vos ardoises au panier et envoyez la commande sur WhatsApp. Nous confirmons le prix final et le délai.'],['2. Payez','MTN Mobile Money, Orange Money ou espèces. Un acompte de 50 % lance la fabrication.'],['3. Recevez','Fabrication en 3 à 5 jours. Livraison à Douala dès 1 500 FCFA, à Yaoundé et Bafoussam dès 3 000 FCFA, ou retrait à l’atelier.']],f:'Nous trouver',a:'Adresse',t:'Téléphone / WhatsApp',m:'E-mail',o:'Horaires',ov:'Lundi – samedi : 8 h – 18 h',p:'Paiement mobile',pv:'MTN MoMo et Orange Money : +237 600 00 00 00',s:'Réseaux',map:'Voir sur la carte',g:'Nos réalisations',c:'© ',r:' Tous droits réservés.'},
+en:{nav:'Practical info',h:'Order, pay, delivery',steps:[['1. Choose','Add your slates to the cart and send the order on WhatsApp. We confirm the final price and the lead time.'],['2. Pay','MTN Mobile Money, Orange Money or cash. A 50% deposit starts production.'],['3. Receive','Made in 3 to 5 days. Delivery in Douala from 1,500 FCFA, in Yaoundé and Bafoussam from 3,000 FCFA, or pick-up at the workshop.']],f:'Find us',a:'Address',t:'Phone / WhatsApp',m:'E-mail',o:'Opening hours',ov:'Monday – Saturday: 8 am – 6 pm',p:'Mobile payment',pv:'MTN MoMo and Orange Money: +237 600 00 00 00',s:'Social',map:'View on map',g:'Our work',c:'© ',r:' All rights reserved.'}};
+function renderInfo(){var x=TX[LG==='en'?'en':'fr'];$('navinfo').textContent=x.nav;
+$('infos').innerHTML='<h2>'+x.h+'</h2><div class="cards">'+x.steps.map(function(s){return '<div class="ic"><b>'+s[0]+'</b><p>'+s[1]+'</p></div>'}).join('')+'</div><h2 style="font-size:1.5rem">'+x.f+'</h2><div class="find"><div><small>'+x.a+'</small>'+SITE.addr+'<br><a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(SITE.addr)+'" target="_blank" rel="noopener">'+x.map+'</a></div><div><small>'+x.t+'</small><a href="tel:'+SITE.tel.replace(/\s/g,'')+'">'+SITE.tel+'</a></div><div><small>'+x.m+'</small><a href="mailto:'+SITE.mail+'">'+SITE.mail+'</a></div><div><small>'+x.o+'</small>'+x.ov+'</div><div><small>'+x.p+'</small>'+x.pv+'</div><div><small>'+x.s+'</small><a href="'+SITE.fb+'" target="_blank" rel="noopener">Facebook</a> · <a href="'+SITE.ig+'" target="_blank" rel="noopener">Instagram</a></div></div>';
+$('legal').innerHTML=x.c+new Date().getFullYear()+' '+SITE.legal+'.'+x.r;
+var gt=document.querySelector('#galerie h2');if(gt)gt.textContent=x.g}
+/* ===== Galerie : photos publiées depuis le dashboard ===== */
+function getGallery(){var fb=function(){return window.ARD_GALLERY||[]};return new Promise(function(res){try{var r=indexedDB.open('ardoises',1);r.onupgradeneeded=function(){r.result.createObjectStore('photos',{keyPath:'id'})};
+r.onsuccess=function(){try{var q=r.result.transaction('photos').objectStore('photos').getAll();q.onsuccess=function(){var a=q.result.filter(function(p){return p.pub}).sort(function(a,b){return b.date-a.date});res(a.length?a:fb())};q.onerror=function(){res(fb())}}catch(e){res(fb())}};r.onerror=function(){res(fb())}}catch(e){res(fb())}})}
+function renderGallery(){getGallery().then(function(a){var g=$('galerie');if(!a.length){g.hidden=true;g.innerHTML='';return}
+g.hidden=false;g.innerHTML='<h2>'+TX[LG==='en'?'en':'fr'].g+'</h2><div class="gg">'+a.map(function(p,i){return '<figure data-i="'+i+'"><img loading="lazy" alt=""><figcaption></figcaption></figure>'}).join('')+'</div>';
+g.querySelectorAll('figure').forEach(function(f,i){f.querySelector('img').src=a[i].src;f.querySelector('img').alt=a[i].name||'';f.querySelector('figcaption').textContent=a[i].name||'';f.onclick=function(){$('lbi').src=a[i].src;$('lbc').textContent=a[i].name||'';$('lb').classList.add('on')}})})}
+$('lb').onclick=function(){this.classList.remove('on')};addEventListener('keydown',function(e){if(e.key==='Escape')$('lb').classList.remove('on')});
+try{if(window.BroadcastChannel)new BroadcastChannel('ard').onmessage=renderGallery}catch(e){}
+/* ===== Panier sauvegardé dans le navigateur ===== */
+try{JSON.parse(localStorage.getItem('ard_cart')||'[]').forEach(function(x){var p=P.filter(function(q){return x&&q.id===x.id})[0];if(p&&p.sizes[x.size]&&x.q>0)cart.push({k:x.k,id:p.id,price:p.sizes[x.size],size:x.size,note:x.note||'',q:Math.min(99,x.q|0)})})}catch(e){}
+var _r=render;render=function(){_r();try{localStorage.setItem('ard_cart',JSON.stringify(cart))}catch(e){}};
+var _s2=setLang;setLang=function(l){_s2(l);renderInfo();renderGallery()};
+/* ===== Commandes en direct : collez ici l'URL du service Google (voir commandes-google.gs) ===== */
+var ORDER_ENDPOINT='';
+(function(){var oo=$('order').onclick;
+function hh(s){var h=0;for(var i=0;i<s.length;i++)h=(Math.imul(31,h)+s.charCodeAt(i))|0;return (h>>>0).toString(36)}
+$('order').onclick=function(e){
+ if(cart.length&&ORDER_ENDPOINT){try{var who=$('who').value.trim(),tot=cart.reduce(function(s,x){return s+x.price*x.q},0),
+ id=hh(JSON.stringify([cart.map(function(x){return x.k+'|'+x.q}),who]))+Math.floor(Date.now()/180000).toString(36);
+ fetch(ORDER_ENDPOINT,{method:'POST',mode:'no-cors',keepalive:true,body:JSON.stringify({id:id,total:tot,who:who,lang:LG,hp:'',lines:cart.map(function(x){return x.q+' × '+pn(x)+' ('+x.size+')'+(x.note?' – '+x.note:'')})})}).catch(function(){})}catch(x){}}
+ return oo.call(this,e)}})();
+render();renderInfo();renderGallery();
+</script>
+</body>
+</html>
